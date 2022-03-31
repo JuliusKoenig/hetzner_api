@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
     failover_ip = robot.failover().detail(failover_ip=failover_ip_str)
     
-    if failover_ip.active_server_ip == "1.2.3.4":
+    if failover_ip.active_server_ip == local_node_ip_str:
         logging.info(f"Failover IP is already routed to this node.")
         sys.exit(0)
 
